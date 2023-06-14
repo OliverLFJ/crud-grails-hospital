@@ -1,0 +1,945 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows:120px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header header" "container container";
+}
+
+.navbar {
+    grid-area: header;
+    background-color: #033a70;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.85);
+}
+
+.navbar > .logo-container > a {
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar > .logo-container > a:visited {
+    color: #FFFFFF;
+}
+
+.navbar > .list-option {
+    width: 20%;
+}
+
+.navbar > .list-option > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > .list-option > ul {
+    list-style: none;
+}
+
+.link-style {
+    text-decoration: none;
+    color: inherit;
+    color: #FFFFFF;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.link-style:hover {
+    color: #3779c0;
+    transform: scale(1.1);
+}
+
+.main-container {
+    grid-area: container;
+    padding: 4rem;
+    position: relative;
+}
+
+
+.titulo {
+    color: #007bff;
+}
+
+.nav {
+    width: max-content;
+    width: 10rem;
+}
+
+.nav > ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.addButton {
+    color: #FFFFFF;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    background-color: #153a52;
+    width: max-content;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton:hover {
+    background-color: #033a70;
+    cursor: pointer;
+}
+
+.lista {
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    box-sizing: content-box;
+    padding: 0;
+}
+
+table > thead > tr {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #02203D;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    height: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+table > thead > tr > th {
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+table > tbody > tr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1d2124;
+}
+
+table > tbody > tr {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: #1e2f42;
+    height: 3rem;
+}
+
+table > tbody > tr > td {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: #FFFFFF;
+}
+
+table > tbody > tr:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.buttons .edit {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 0.3rem;
+    background-color: #04AA6D;
+    border-radius: 0.4rem;
+
+}
+
+.buttons .delete-button {
+    background-color: red;
+    border-radius: 0.4rem;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    padding: 0.3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.edit:hover {
+    transform: scale(0.9);
+}
+
+.delete-button:hover {
+    transform: scale(0.9);
+}
+
+.form{
+    padding: 3rem;
+    width: 20em;
+    height: 30em;
+    background-color: #2b4865;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 3rem;
+    gap: 1rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-group>label{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.form-group>.form-control{
+    outline: none;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.cancelBotton{
+    background-color: #FFFFFF;
+    text-decoration: none;
+    color: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.save{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #047915;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    border: none;
+    font-weight: 600;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.save:hover{
+    cursor: pointer;
+    background-color: #047915;
+    color: #FFFFFF;
+}
+.cancelBotton:hover{
+    cursor: pointer;
+    background-color: red;
+    color: #FFFFFF;
+}
+
+/**TABLAS**/
+
+.table-doctor > thead > tr {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.table-doctor > tbody > tr {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.table-hospital > thead > tr {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.table-hospital > tbody > tr {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.pop-up{
+    visibility: hidden;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.59);
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: -18em;
+    opacity: 0;
+}
+
+.pop-up::before{
+    content: "";
+    filter: blur(5px);
+}
+
+.container-pop{
+    background-color: #FFFFFF;
+    border: solid 1px #0c5460;
+    width: 25%;
+    height: max-content;
+    z-index: 10;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2rem;
+    grid-template-areas: "tituloPop tituloPop" "popBody popBody";
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.85);
+}
+
+.body-pop>{
+    grid-area: tituloPop;
+    background-color: #05d0f3;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.buttons-pop{
+    grid-area: popBody;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.body-pop>h2{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.body-pop h5{
+    color: #0c376c;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.body-pop>p{
+    color: #000000;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.siButton{
+    background-color: #FFFFFF;
+    border: solid 1px red;
+    color: red;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.siButton:hover{
+    background-color: red;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.noButton{
+    background-color: #FFFFFF;
+    border: solid 1px #228022;
+    color: #228022;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.noButton:hover{
+    background-color: #228022;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.confirmation-cancel{
+    opacity: 0;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.text-confirmation>p{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#contenedor-load{
+    display: none;
+}
+
+.contenedor-load{
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+    height: max-content;
+    color: #fa0000;
+    z-index: 199;
+}
+
+.rueda {
+    border: 15px solid rgba(3, 3, 3, 0.3);
+    border-radius: 50%;
+    border-left-color: #007bff;
+    border-top-color: #007bff;
+    border-right-color: #007bff;
+    width: 80px;
+    height: 80px;
+    animation: giro 1s linear infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**DOCTOR SECCION**/
+
+.pop-up-doctor{
+    visibility: hidden;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.59);
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: -15em;
+    opacity: 0;
+}
+
+.pop-up-doctor::before{
+    content: "";
+    filter: blur(5px);
+}
+
+.container-pop-doctor{
+    background-color: #FFFFFF;
+    border: solid 1px #0c5460;
+    width: 25%;
+    height: max-content;
+    z-index: 10;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2rem;
+    grid-template-areas: "tituloPop tituloPop" "popBody popBody";
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.85);
+}
+
+.body-pop-doctor>{
+    grid-area: tituloPop;
+    background-color: #05d0f3;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.buttons-pop-doctor{
+    grid-area: popBody;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.body-pop-doctor>h2{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.body-pop-doctor h5{
+    color: #0c376c;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.body-pop-doctor>p{
+    color: #000000;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.siButton-doctor{
+    background-color: #FFFFFF;
+    border: solid 1px red;
+    color: red;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.siButton-doctor:hover{
+    background-color: red;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.noButton-doctor{
+    background-color: #FFFFFF;
+    border: solid 1px #228022;
+    color: #228022;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.noButton-doctor:hover{
+    background-color: #228022;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.confirmation-cancel-doctor{
+    opacity: 0;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.text-confirmation-doctor>p{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#contenedor-load-doctor{
+    display: none;
+}
+
+.contenedor-load-doctor{
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+    height: max-content;
+    color: #fa0000;
+    z-index: 199;
+}
+
+.rueda-doctor {
+    border: 15px solid rgba(3, 3, 3, 0.3);
+    border-radius: 50%;
+    border-left-color: #007bff;
+    border-top-color: #007bff;
+    border-right-color: #007bff;
+    width: 80px;
+    height: 80px;
+    animation: giro 1s linear infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/**HOSPITAL SECCION**/
+
+.pop-up-hospital{
+    visibility: hidden;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.59);
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: -14em;
+    opacity: 0;
+}
+
+.pop-up-hospital::before{
+    content: "";
+    filter: blur(5px);
+}
+
+.container-pop-hospital{
+    background-color: #FFFFFF;
+    border: solid 1px #0c5460;
+    width: 25%;
+    height: max-content;
+    z-index: 10;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2rem;
+    grid-template-areas: "tituloPop tituloPop" "popBody popBody";
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.85);
+}
+
+.body-pop-hospital>{
+    grid-area: tituloPop;
+    background-color: #05d0f3;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.buttons-pop-hospital{
+    grid-area: popBody;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.body-pop-hospital>h2{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.body-pop-hospital h5{
+    color: #0c376c;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.body-pop-hospital>p{
+    color: #000000;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.siButton-hospital{
+    background-color: #FFFFFF;
+    border: solid 1px red;
+    color: red;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.siButton-hospital:hover{
+    background-color: red;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.noButton-hospital{
+    background-color: #FFFFFF;
+    border: solid 1px #228022;
+    color: #228022;
+    width: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.noButton-hospital:hover{
+    background-color: #228022;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.confirmation-cancel-hospital{
+    opacity: 0;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.text-confirmation-hospital>p{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#contenedor-load-hospital{
+    display: none;
+}
+
+.contenedor-load-hospital{
+    background-color: transparent;
+    display: grid;
+    place-content: center;
+    height: max-content;
+    color: #fa0000;
+    z-index: 199;
+}
+
+.rueda-hospital{
+    border: 15px solid rgba(3, 3, 3, 0.3);
+    border-radius: 50%;
+    border-left-color: #007bff;
+    border-top-color: #007bff;
+    border-right-color: #007bff;
+    width: 80px;
+    height: 80px;
+    animation: giro 1s linear infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**CREATE HOSPITAL**/
+
+.confirmation-create-hospital{
+    display: none;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.pop-up-hospital-create{
+    position: absolute;
+    background-color: red;
+    background-color: rgba(255, 255, 255, 0.59);
+    width: 100%;
+    height: 80%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+/**CREATE DOCTOR**/
+.confirmation-create-doctor{
+    display: none;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+}
+
+.pop-up-doctor-create{
+    position: absolute;
+    background-color: red;
+    background-color: rgba(255, 255, 255, 0.59);
+    width: 100%;
+    height: 80%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+
+/**CREATE CITA**/
+.confirmation-citas-doctor{
+    display: none;
+    background-color: #65ce65;
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.85);
+    opacity: 0;
+}
+
+.pop-up-citas-create{
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.59);
+    width: 100%;
+    height: 80%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.filtros{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+}
+
+.filtro>label{
+    color: #0c5460;
+    font-weight: 800;
+}
+
+.filtro input[type='date']{
+    width: 15rem;
+    outline: none;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    border:solid 1px #0c5460;
+}
+
+
+.filtros .submitButtonFiltrar{
+    width: 4rem;
+    outline: none;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    border:solid 1px #0c5460;
+    background-color: #0c5460;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.filtros .submitButtonFiltrar:hover{
+    cursor: pointer;
+    background-color: #39808c;
+    color: #FFFFFF;
+}
+
+.filtro .selectFiltro{
+    width: 15rem;
+    outline: none;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    border:solid 1px #0c5460;
+}
+
+.row-blue{
+    background-color: #2b4865;
+}
+
+.row-blueStrong{
+    background-color: #2a3c4d;
+}
